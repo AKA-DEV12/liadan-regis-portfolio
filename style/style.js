@@ -62,64 +62,31 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Download CV function
     function downloadCV() {
-        // Create a blob with CV content (in a real scenario, you'd have an actual PDF file)
-        const cvContent = `
-CV - Liadan Régis Barthélémy KOUTOUAN
-Communicant digital & entrepreneur polyvalent
+        // Path to your PDF file in media/cv folder
+        const pdfPath = "media/RegisKoutouan.pdf"
 
-Contact:
-Email: koutouanc24@gmail.com
-Téléphone: +225 07 79 26 76 35
-Localisation: Abidjan, Côte d'Ivoire
+        // Try to open the PDF in a new tab first
+        try {
+            window.open(pdfPath, "_blank")
+            showNotification("CV ouvert dans un nouvel onglet!", "success")
+        } catch (error) {
+            // Fallback: create download link
+            const link = document.createElement("a")
+            link.href = pdfPath
+            link.download = "CV-Liadan-Regis-Barthelemy-KOUTOUAN.pdf"
+            link.target = "_blank"
 
-"Communiquer avec sens, entreprendre avec impact."
+            // Add link to DOM temporarily
+            document.body.appendChild(link)
 
-FORMATION:
-- Employé polyvalent des produits de la mer - ARSTM
-- Communication digitale (autodidacte)
-- Leadership scout
-- Formation catéchétique (en cours)
+            // Trigger download
+            link.click()
 
-EXPÉRIENCE:
-- Responsable communication - Paroisse Saint Michel Archange d'Adjamé (En cours)
-- Fondateur - Galerie Divine Cars & Rere Store 225 (2023 - En cours)
-- Conseiller client - Concentrix (2022 - 2023)
-- Archiviste - Hooda Graphics (2021 - 2022)
+            // Clean up
+            document.body.removeChild(link)
 
-COMPÉTENCES:
-- Canva (90%)
-- CapCut (85%)
-- Communication digitale (95%)
-- Animation communautés (90%)
-- Microsoft Office (85%)
-- Rédaction de contenu (90%)
-- Organisation d'événements (88%)
-- Leadership (92%)
-
-PROJETS:
-- Page TikTok paroissiale
-- Pharmacie en ligne réglementée (en développement)
-- Animation groupe WhatsApp jeunesse
-- Événements scouts & catholiques
-
-RÉSEAUX SOCIAUX:
-- LinkedIn: linkedin.com/in/liadan-regis-barthelemy-k-a50789329
-- Facebook: Regis Liadan
-- TikTok: @man_of_03_mayeur
-        `
-
-        const blob = new Blob([cvContent], { type: "text/plain" })
-        const url = window.URL.createObjectURL(blob)
-        const link = document.createElement("a")
-        link.href = url
-        link.download = "CV-Liadan-Regis-Barthelemy-KOUTOUAN.txt"
-        document.body.appendChild(link)
-        link.click()
-        document.body.removeChild(link)
-        window.URL.revokeObjectURL(url)
-
-        // Show download notification
-        showNotification("CV téléchargé avec succès!", "success")
+            showNotification("Téléchargement du CV lancé!", "success")
+        }
     }
 
     // Show notification function
@@ -438,25 +405,5 @@ function copyToClipboard(text) {
         window.showNotification("Copié dans le presse-papiers!", "success")
     }
 }
-
-// Add copy functionality to contact info
-document.addEventListener("DOMContentLoaded", () => {
-    const emailLink = document.querySelector('a[href^="mailto:"]')
-    const phoneLink = document.querySelector('a[href^="tel:"]')
-
-    if (emailLink) {
-        emailLink.addEventListener("contextmenu", (e) => {
-            e.preventDefault()
-            copyToClipboard(emailLink.textContent)
-        })
-    }
-
-    if (phoneLink) {
-        phoneLink.addEventListener("contextmenu", (e) => {
-            e.preventDefault()
-            copyToClipboard(phoneLink.textContent)
-        })
-    }
-})
 
 window.showNotification = showNotification
