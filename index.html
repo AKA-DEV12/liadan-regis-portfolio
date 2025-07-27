@@ -1,0 +1,733 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liadan Régis Barthélémy KOUTOUAN - Portfolio</title>
+    <meta name="description"
+        content="Communicant digital & entrepreneur polyvalent - Communiquer avec sens, entreprendre avec impact.">
+    <meta name="keywords"
+        content="communication digitale, entrepreneur, Côte d'Ivoire, marketing digital, TikTok, leadership">
+    <meta name="author" content="Liadan Régis Barthélémy KOUTOUAN">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Liadan Régis Barthélémy KOUTOUAN - Portfolio">
+    <meta property="og:description" content="Communicant digital & entrepreneur polyvalent">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://votre-domaine.com">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style/style.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍💼</text></svg>">
+</head>
+
+<body class="scroll-smooth">
+    <div class="min-h-screen gradient-bg">
+        <!-- Navigation -->
+        <nav id="navbar" class="fixed top-0 w-full z-50 transition-all duration-300">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center py-4">
+                    <div class="text-2xl font-bold text-blue-900">LRB.K</div>
+                    <div class="hidden md:flex space-x-8">
+                        <a href="#hero"
+                            class="nav-link text-sm font-medium text-gray-700 hover:text-blue-600 active">Accueil</a>
+                        <a href="#about" class="nav-link text-sm font-medium text-gray-700 hover:text-blue-600">À
+                            propos</a>
+                        <a href="#skills"
+                            class="nav-link text-sm font-medium text-gray-700 hover:text-blue-600">Compétences</a>
+                        <a href="#experience"
+                            class="nav-link text-sm font-medium text-gray-700 hover:text-blue-600">Expérience</a>
+                        <a href="#projects"
+                            class="nav-link text-sm font-medium text-gray-700 hover:text-blue-600">Projets</a>
+                        <a href="#contact"
+                            class="nav-link text-sm font-medium text-gray-700 hover:text-blue-600">Contact</a>
+                    </div>
+                    <button id="download-cv-btn"
+                        class="btn-primary bg-blue-900 hover:bg-blue-800 text-white px-4 py-2 rounded-md font-medium transition-all flex items-center">
+                        <i data-lucide="download" class="w-4 h-4 mr-2"></i>
+                        Télécharger CV
+                    </button>
+
+                    <!-- Mobile menu button -->
+                    <button id="mobile-menu-btn" class="md:hidden text-gray-700 hover:text-blue-600">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+
+                <!-- Mobile menu -->
+                <div id="mobile-menu"
+                    class="md:hidden hidden bg-white/95 backdrop-blur-md rounded-lg mt-2 p-4 shadow-lg">
+                    <div class="flex flex-col space-y-3">
+                        <a href="#hero" class="nav-link-mobile text-gray-700 hover:text-blue-600 py-2">Accueil</a>
+                        <a href="#about" class="nav-link-mobile text-gray-700 hover:text-blue-600 py-2">À propos</a>
+                        <a href="#skills" class="nav-link-mobile text-gray-700 hover:text-blue-600 py-2">Compétences</a>
+                        <a href="#experience"
+                            class="nav-link-mobile text-gray-700 hover:text-blue-600 py-2">Expérience</a>
+                        <a href="#projects" class="nav-link-mobile text-gray-700 hover:text-blue-600 py-2">Projets</a>
+                        <a href="#contact" class="nav-link-mobile text-gray-700 hover:text-blue-600 py-2">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section id="hero" class="min-h-screen flex items-center justify-center pt-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid lg:grid-cols-2 gap-12 items-center">
+                    <div class="text-center lg:text-left animate-slide-left">
+                        <div class="mb-6">
+                            <h1 class="hero-title text-4xl md:text-6xl font-bold text-gray-900 mb-4">
+                                Liadan Régis Barthélémy
+                                <span class="block text-blue-900">KOUTOUAN</span>
+                            </h1>
+                            <p class="hero-subtitle text-xl md:text-2xl text-gray-600 mb-6">Communicant digital &
+                                entrepreneur polyvalent</p>
+                            <div
+                                class="inline-flex items-center px-6 py-3 bg-blue-900 text-white rounded-full text-lg font-medium animate-pulse-hover">
+                                <i data-lucide="heart" class="w-5 h-5 mr-2"></i>
+                                "Communiquer avec sens, entreprendre avec impact."
+                            </div>
+                        </div>
+                        <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                            <button onclick="scrollToSection('contact')"
+                                class="btn-primary bg-blue-900 hover:bg-blue-800 text-white px-6 py-3 rounded-md font-medium transition-all">
+                                Me contacter
+                            </button>
+                            <button onclick="scrollToSection('about')"
+                                class="border border-blue-900 text-blue-900 hover:bg-blue-50 px-6 py-3 rounded-md font-medium transition-all">
+                                En savoir plus
+                            </button>
+                        </div>
+                    </div>
+                    <div class="flex justify-center animate-slide-right">
+                        <div class="relative">
+                            <div class="w-80 h-80 rounded-full hero-gradient p-2 animate-pulse-hover">
+                                <div class="w-full h-full rounded-full bg-white flex items-center justify-center">
+                                    <!-- <i data-lucide="user" ></i> -->
+                                    <img class="w-80 h-80 object-cover rounded-full" src="media/lbrk1.jpg" alt="">
+                                </div>
+                            </div>
+                            <div class="absolute -bottom-4 -right-4 bg-white rounded-full p-4 shadow-lg icon-container">
+                                <i data-lucide="zap" class="w-8 h-8 text-blue-900"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+                <i data-lucide="chevron-down" class="w-6 h-6 text-blue-900 cursor-pointer"
+                    onclick="scrollToSection('about')"></i>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="section-title text-3xl md:text-4xl font-bold text-gray-900 mb-4">À propos de moi</h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                        Passionné par la communication digitale et l'entrepreneuriat, je mets mes compétences au service
+                        de l'impact social et spirituel.
+                    </p>
+                </div>
+
+                <div class="grid lg:grid-cols-3 gap-8">
+                    <div class="bg-white border border-blue-100 rounded-lg p-6 card-hover">
+                        <i data-lucide="target" class="w-8 h-8 text-blue-900 mb-4 icon-container"></i>
+                        <h3 class="text-xl font-bold text-blue-900 mb-3">Vision</h3>
+                        <p class="text-gray-600">
+                            Inspirer, encadrer et impacter la jeunesse à travers la communication digitale chrétienne et
+                            sociale, tout en développant des projets entrepreneuriaux innovants au service de la
+                            communauté.
+                        </p>
+                    </div>
+
+                    <div class="bg-white border border-blue-100 rounded-lg p-6 card-hover">
+                        <i data-lucide="globe" class="w-8 h-8 text-blue-900 mb-4 icon-container"></i>
+                        <h3 class="text-xl font-bold text-blue-900 mb-3">Localisation</h3>
+                        <div class="space-y-3">
+                            <div class="flex items-center text-gray-600">
+                                <i data-lucide="map-pin" class="w-4 h-4 mr-2"></i>
+                                Abidjan, Côte d'Ivoire
+                            </div>
+                            <div class="flex items-center text-gray-600">
+                                <i data-lucide="users" class="w-4 h-4 mr-2"></i>
+                                Français (courant), Nouchi (avancé)
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bg-white border border-blue-100 rounded-lg p-6 card-hover">
+                        <i data-lucide="award" class="w-8 h-8 text-blue-900 mb-4 icon-container"></i>
+                        <h3 class="text-xl font-bold text-blue-900 mb-3">Formation</h3>
+                        <div class="space-y-2">
+                            <p class="font-medium text-gray-900">Employé polyvalent des produits de la mer</p>
+                            <p class="text-sm text-gray-600">ARSTM - Formation diplômante</p>
+                            <div class="mt-3">
+                                <p class="text-sm text-gray-600">Formations complémentaires :</p>
+                                <ul class="text-sm text-gray-600 mt-1">
+                                    <li>• Communication digitale</li>
+                                    <li>• Leadership scout</li>
+                                    <li>• Formation catéchétique (en cours)</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-20 gradient-bg">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="section-title text-3xl md:text-4xl font-bold text-gray-900 mb-4">Compétences</h2>
+                    <p class="text-xl text-gray-600">
+                        Un ensemble de compétences techniques et humaines au service de vos projets
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6" id="skills-grid">
+                    <!-- Canva -->
+                    <div class="bg-white border border-blue-100 rounded-lg p-6 card-hover">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h4 class="text-lg font-bold text-blue-900">Canva</h4>
+                                <p class="text-sm text-gray-600">Design</p>
+                            </div>
+                            <span
+                                class="badge-status bg-blue-100 text-blue-900 px-2 py-1 rounded text-sm font-medium">90%</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2">
+                            <div class="skill-bar h-2 rounded-full" data-width="90" style="width: 0%"></div>
+                        </div>
+                    </div>
+
+                    <!-- CapCut -->
+                    <div class="bg-white border border-blue-100 rounded-lg p-6 card-hover">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h4 class="text-lg font-bold text-blue-900">CapCut</h4>
+                                <p class="text-sm text-gray-600">Vidéo</p>
+                            </div>
+                            <span
+                                class="badge-status bg-blue-100 text-blue-900 px-2 py-1 rounded text-sm font-medium">85%</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2">
+                            <div class="skill-bar h-2 rounded-full" data-width="85" style="width: 0%"></div>
+                        </div>
+                    </div>
+
+                    <!-- Communication digitale -->
+                    <div class="bg-white border border-blue-100 rounded-lg p-6 card-hover">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h4 class="text-lg font-bold text-blue-900">Communication digitale</h4>
+                                <p class="text-sm text-gray-600">Marketing</p>
+                            </div>
+                            <span
+                                class="badge-status bg-blue-100 text-blue-900 px-2 py-1 rounded text-sm font-medium">95%</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2">
+                            <div class="skill-bar h-2 rounded-full" data-width="95" style="width: 0%"></div>
+                        </div>
+                    </div>
+
+                    <!-- Animation communautés -->
+                    <div class="bg-white border border-blue-100 rounded-lg p-6 card-hover">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h4 class="text-lg font-bold text-blue-900">Animation communautés</h4>
+                                <p class="text-sm text-gray-600">Social Media</p>
+                            </div>
+                            <span
+                                class="badge-status bg-blue-100 text-blue-900 px-2 py-1 rounded text-sm font-medium">90%</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2">
+                            <div class="skill-bar h-2 rounded-full" data-width="90" style="width: 0%"></div>
+                        </div>
+                    </div>
+
+                    <!-- Microsoft Office -->
+                    <div class="bg-white border border-blue-100 rounded-lg p-6 card-hover">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h4 class="text-lg font-bold text-blue-900">Microsoft Office</h4>
+                                <p class="text-sm text-gray-600">Bureautique</p>
+                            </div>
+                            <span
+                                class="badge-status bg-blue-100 text-blue-900 px-2 py-1 rounded text-sm font-medium">85%</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2">
+                            <div class="skill-bar h-2 rounded-full" data-width="85" style="width: 0%"></div>
+                        </div>
+                    </div>
+
+                    <!-- Rédaction de contenu -->
+                    <div class="bg-white border border-blue-100 rounded-lg p-6 card-hover">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h4 class="text-lg font-bold text-blue-900">Rédaction de contenu</h4>
+                                <p class="text-sm text-gray-600">Content</p>
+                            </div>
+                            <span
+                                class="badge-status bg-blue-100 text-blue-900 px-2 py-1 rounded text-sm font-medium">90%</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2">
+                            <div class="skill-bar h-2 rounded-full" data-width="90" style="width: 0%"></div>
+                        </div>
+                    </div>
+
+                    <!-- Organisation d'événements -->
+                    <div class="bg-white border border-blue-100 rounded-lg p-6 card-hover">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h4 class="text-lg font-bold text-blue-900">Organisation d'événements</h4>
+                                <p class="text-sm text-gray-600">Management</p>
+                            </div>
+                            <span
+                                class="badge-status bg-blue-100 text-blue-900 px-2 py-1 rounded text-sm font-medium">88%</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2">
+                            <div class="skill-bar h-2 rounded-full" data-width="88" style="width: 0%"></div>
+                        </div>
+                    </div>
+
+                    <!-- Leadership -->
+                    <div class="bg-white border border-blue-100 rounded-lg p-6 card-hover">
+                        <div class="flex justify-between items-start mb-4">
+                            <div>
+                                <h4 class="text-lg font-bold text-blue-900">Leadership</h4>
+                                <p class="text-sm text-gray-600">Soft Skills</p>
+                            </div>
+                            <span
+                                class="badge-status bg-blue-100 text-blue-900 px-2 py-1 rounded text-sm font-medium">92%</span>
+                        </div>
+                        <div class="w-full bg-gray-200 rounded-full h-2">
+                            <div class="skill-bar h-2 rounded-full" data-width="92" style="width: 0%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-12 text-center">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6">Soft Skills</h3>
+                    <div class="flex flex-wrap justify-center gap-3">
+                        <span
+                            class="border border-blue-200 text-blue-900 px-4 py-2 rounded-full text-sm hover:bg-blue-50 transition-colors">Créativité</span>
+                        <span
+                            class="border border-blue-200 text-blue-900 px-4 py-2 rounded-full text-sm hover:bg-blue-50 transition-colors">Rigueur</span>
+                        <span
+                            class="border border-blue-200 text-blue-900 px-4 py-2 rounded-full text-sm hover:bg-blue-50 transition-colors">Autonomie</span>
+                        <span
+                            class="border border-blue-200 text-blue-900 px-4 py-2 rounded-full text-sm hover:bg-blue-50 transition-colors">Leadership</span>
+                        <span
+                            class="border border-blue-200 text-blue-900 px-4 py-2 rounded-full text-sm hover:bg-blue-50 transition-colors">Sens
+                            de l'écoute</span>
+                        <span
+                            class="border border-blue-200 text-blue-900 px-4 py-2 rounded-full text-sm hover:bg-blue-50 transition-colors">Esprit
+                            d'équipe</span>
+                        <span
+                            class="border border-blue-200 text-blue-900 px-4 py-2 rounded-full text-sm hover:bg-blue-50 transition-colors">Innovation</span>
+                        <span
+                            class="border border-blue-200 text-blue-900 px-4 py-2 rounded-full text-sm hover:bg-blue-50 transition-colors">Adaptabilité</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="section-title text-3xl md:text-4xl font-bold text-gray-900 mb-4">Expérience
+                        professionnelle</h2>
+                    <p class="text-xl text-gray-600">
+                        Un parcours riche et diversifié dans la communication et l'entrepreneuriat
+                    </p>
+                </div>
+
+                <div class="space-y-8">
+                    <!-- Responsable communication -->
+                    <div class="bg-white border border-blue-100 rounded-lg p-6 card-hover">
+                        <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                            <div>
+                                <h3 class="text-xl font-bold text-blue-900 mb-1">Responsable communication</h3>
+                                <p class="text-lg font-medium text-gray-700">Paroisse Saint Michel Archange d'Adjamé</p>
+                            </div>
+                            <span
+                                class="badge-status border border-blue-200 text-blue-900 px-3 py-1 rounded-full text-sm mt-2 md:mt-0 w-fit flex items-center">
+                                <i data-lucide="calendar" class="w-3 h-3 mr-1"></i>
+                                En cours
+                            </span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Gestion de la communication digitale paroissiale, création de
+                            contenu spirituel et animation des réseaux sociaux.</p>
+                        <div>
+                            <h4 class="font-medium text-gray-900 mb-2">Réalisations clés :</h4>
+                            <ul class="space-y-1">
+                                <li class="flex items-start text-gray-600">
+                                    <div class="w-2 h-2 bg-blue-900 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                                    Création page TikTok paroissiale
+                                </li>
+                                <li class="flex items-start text-gray-600">
+                                    <div class="w-2 h-2 bg-blue-900 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                                    Animation groupe WhatsApp jeunesse
+                                </li>
+                                <li class="flex items-start text-gray-600">
+                                    <div class="w-2 h-2 bg-blue-900 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                                    Organisation événements catholiques
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Fondateur -->
+                    <div class="bg-white border border-blue-100 rounded-lg p-6 card-hover">
+                        <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                            <div>
+                                <h3 class="text-xl font-bold text-blue-900 mb-1">Fondateur</h3>
+                                <p class="text-lg font-medium text-gray-700">Galerie Divine Cars & Rere Store 225</p>
+                            </div>
+                            <span
+                                class="badge-status border border-blue-200 text-blue-900 px-3 py-1 rounded-full text-sm mt-2 md:mt-0 w-fit flex items-center">
+                                <i data-lucide="calendar" class="w-3 h-3 mr-1"></i>
+                                2023 - En cours
+                            </span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Création et gestion d'entreprises dans le secteur automobile et
+                            commercial.</p>
+                        <div>
+                            <h4 class="font-medium text-gray-900 mb-2">Réalisations clés :</h4>
+                            <ul class="space-y-1">
+                                <li class="flex items-start text-gray-600">
+                                    <div class="w-2 h-2 bg-blue-900 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                                    Développement marque personnelle
+                                </li>
+                                <li class="flex items-start text-gray-600">
+                                    <div class="w-2 h-2 bg-blue-900 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                                    Gestion équipe commerciale
+                                </li>
+                                <li class="flex items-start text-gray-600">
+                                    <div class="w-2 h-2 bg-blue-900 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                                    Stratégie marketing digital
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Conseiller client -->
+                    <div class="bg-white border border-blue-100 rounded-lg p-6 card-hover">
+                        <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                            <div>
+                                <h3 class="text-xl font-bold text-blue-900 mb-1">Conseiller client</h3>
+                                <p class="text-lg font-medium text-gray-700">Concentrix</p>
+                            </div>
+                            <span
+                                class="badge-status border border-blue-200 text-blue-900 px-3 py-1 rounded-full text-sm mt-2 md:mt-0 w-fit flex items-center">
+                                <i data-lucide="calendar" class="w-3 h-3 mr-1"></i>
+                                2022 - 2023
+                            </span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Conseil et accompagnement clientèle, résolution de problématiques
+                            complexes.</p>
+                        <div>
+                            <h4 class="font-medium text-gray-900 mb-2">Réalisations clés :</h4>
+                            <ul class="space-y-1">
+                                <li class="flex items-start text-gray-600">
+                                    <div class="w-2 h-2 bg-blue-900 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                                    Satisfaction client 95%
+                                </li>
+                                <li class="flex items-start text-gray-600">
+                                    <div class="w-2 h-2 bg-blue-900 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                                    Formation équipe junior
+                                </li>
+                                <li class="flex items-start text-gray-600">
+                                    <div class="w-2 h-2 bg-blue-900 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                                    Amélioration processus
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Archiviste -->
+                    <div class="bg-white border border-blue-100 rounded-lg p-6 card-hover">
+                        <div class="flex flex-col md:flex-row md:items-center md:justify-between mb-4">
+                            <div>
+                                <h3 class="text-xl font-bold text-blue-900 mb-1">Archiviste</h3>
+                                <p class="text-lg font-medium text-gray-700">Hooda Graphics</p>
+                            </div>
+                            <span
+                                class="badge-status border border-blue-200 text-blue-900 px-3 py-1 rounded-full text-sm mt-2 md:mt-0 w-fit flex items-center">
+                                <i data-lucide="calendar" class="w-3 h-3 mr-1"></i>
+                                2021 - 2022
+                            </span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Gestion et organisation des archives numériques, optimisation des
+                            processus documentaires.</p>
+                        <div>
+                            <h4 class="font-medium text-gray-900 mb-2">Réalisations clés :</h4>
+                            <ul class="space-y-1">
+                                <li class="flex items-start text-gray-600">
+                                    <div class="w-2 h-2 bg-blue-900 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                                    Digitalisation archives
+                                </li>
+                                <li class="flex items-start text-gray-600">
+                                    <div class="w-2 h-2 bg-blue-900 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                                    Système de classification
+                                </li>
+                                <li class="flex items-start text-gray-600">
+                                    <div class="w-2 h-2 bg-blue-900 rounded-full mt-2 mr-3 flex-shrink-0"></div>
+                                    Formation utilisateurs
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-20 gradient-bg">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="section-title text-3xl md:text-4xl font-bold text-gray-900 mb-4">Projets & Réalisations
+                    </h2>
+                    <p class="text-xl text-gray-600">
+                        Des initiatives concrètes alliant innovation digitale et impact social
+                    </p>
+                </div>
+
+                <div class="grid md:grid-cols-2 gap-8">
+                    <!-- Page TikTok Paroissiale -->
+                    <div class="bg-white border border-blue-100 rounded-lg p-6 card-hover">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold text-blue-900">Page TikTok Paroissiale</h3>
+                            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">
+                                Actif
+                            </span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Création et animation d'une page TikTok pour l'évangélisation
+                            digitale moderne.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="border border-blue-200 text-blue-900 px-3 py-1 rounded-full text-sm">TikTok</span>
+                            <span
+                                class="border border-blue-200 text-blue-900 px-3 py-1 rounded-full text-sm">Communication</span>
+                            <span
+                                class="border border-blue-200 text-blue-900 px-3 py-1 rounded-full text-sm">Spiritualité</span>
+                        </div>
+                    </div>
+
+                    <!-- Pharmacie en ligne -->
+                    <div class="bg-white border border-blue-100 rounded-lg p-6 card-hover">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold text-blue-900">Pharmacie en ligne réglementée</h3>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
+                                En développement
+                            </span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Projet de plateforme e-commerce avec système de livraison conforme
+                            aux réglementations.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="border border-blue-200 text-blue-900 px-3 py-1 rounded-full text-sm">E-commerce</span>
+                            <span
+                                class="border border-blue-200 text-blue-900 px-3 py-1 rounded-full text-sm">Santé</span>
+                            <span
+                                class="border border-blue-200 text-blue-900 px-3 py-1 rounded-full text-sm">Logistique</span>
+                        </div>
+                    </div>
+
+                    <!-- Animation Jeunesse WhatsApp -->
+                    <div class="bg-white border border-blue-100 rounded-lg p-6 card-hover">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold text-blue-900">Animation Jeunesse WhatsApp</h3>
+                            <span class="bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-medium">
+                                Actif
+                            </span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Animation hebdomadaire d'un groupe WhatsApp pour l'encadrement de
+                            la jeunesse paroissiale.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="border border-blue-200 text-blue-900 px-3 py-1 rounded-full text-sm">Animation</span>
+                            <span
+                                class="border border-blue-200 text-blue-900 px-3 py-1 rounded-full text-sm">Jeunesse</span>
+                            <span
+                                class="border border-blue-200 text-blue-900 px-3 py-1 rounded-full text-sm">Communication</span>
+                        </div>
+                    </div>
+
+                    <!-- Événements Scouts & Catholiques -->
+                    <div class="bg-white border border-blue-100 rounded-lg p-6 card-hover">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold text-blue-900">Événements Scouts & Catholiques</h3>
+                            <span class="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm font-medium">
+                                Récurrent
+                            </span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Organisation et communication d'événements communautaires et
+                            spirituels.</p>
+                        <div class="flex flex-wrap gap-2">
+                            <span
+                                class="border border-blue-200 text-blue-900 px-3 py-1 rounded-full text-sm">Événementiel</span>
+                            <span
+                                class="border border-blue-200 text-blue-900 px-3 py-1 rounded-full text-sm">Scoutisme</span>
+                            <span
+                                class="border border-blue-200 text-blue-900 px-3 py-1 rounded-full text-sm">Logistique</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-20 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="section-title text-3xl md:text-4xl font-bold text-gray-900 mb-4">Contactez-moi</h2>
+                    <p class="text-xl text-gray-600">Prêt à collaborer sur votre prochain projet ? Discutons-en !</p>
+                </div>
+
+                <div class="grid lg:grid-cols-2 gap-12">
+                    <div>
+                        <h3 class="text-2xl font-bold text-gray-900 mb-6">Informations de contact</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-center">
+                                <div
+                                    class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4 icon-container">
+                                    <i data-lucide="mail" class="w-6 h-6 text-blue-900"></i>
+                                </div>
+                                <div>
+                                    <p class="font-medium text-gray-900">Email</p>
+                                    <a href="mailto:koutouanc24@gmail.com"
+                                        class="text-blue-600 hover:underline transition-colors">
+                                        koutouanc24@gmail.com
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center">
+                                <div
+                                    class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4 icon-container">
+                                    <i data-lucide="phone" class="w-6 h-6 text-blue-900"></i>
+                                </div>
+                                <div>
+                                    <p class="font-medium text-gray-900">Téléphone</p>
+                                    <a href="tel:+2250779267635"
+                                        class="text-blue-600 hover:underline transition-colors">
+                                        +225 07 79 26 76 35
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center">
+                                <div
+                                    class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4 icon-container">
+                                    <i data-lucide="map-pin" class="w-6 h-6 text-blue-900"></i>
+                                </div>
+                                <div>
+                                    <p class="font-medium text-gray-900">Localisation</p>
+                                    <p class="text-gray-600">Abidjan, Côte d'Ivoire</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="border-t border-gray-200 my-8"></div>
+
+                        <h4 class="text-lg font-bold text-gray-900 mb-4">Réseaux sociaux</h4>
+                        <div class="flex space-x-4">
+                            <a href="https://linkedin.com/in/liadan-regis-barthelemy-k-a50789329" target="_blank"
+                                rel="noopener noreferrer"
+                                class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center hover:bg-blue-200 transition-colors icon-container"
+                                title="LinkedIn">
+                                <i data-lucide="linkedin" class="w-6 h-6 text-blue-900"></i>
+                            </a>
+                            <a href="https://facebook.com/regis.liadan" target="_blank" rel="noopener noreferrer"
+                                class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center hover:bg-blue-200 transition-colors icon-container"
+                                title="Facebook">
+                                <i data-lucide="facebook" class="w-6 h-6 text-blue-900"></i>
+                            </a>
+                            <a href="https://tiktok.com/@man_of_03_mayeur" target="_blank" rel="noopener noreferrer"
+                                class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center hover:bg-blue-200 transition-colors icon-container"
+                                title="TikTok">
+                                <i data-lucide="external-link" class="w-6 h-6 text-blue-900"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="bg-white border border-blue-100 rounded-lg p-6 card-hover">
+                        <h3 class="text-xl font-bold text-blue-900 mb-4">Centres d'intérêt</h3>
+                        <div class="grid grid-cols-2 gap-4">
+                            <div
+                                class="flex items-center p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors">
+                                <i data-lucide="globe" class="w-5 h-5 text-blue-900 mr-2"></i>
+                                <span class="text-sm text-gray-700">Communication digitale</span>
+                            </div>
+                            <div
+                                class="flex items-center p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors">
+                                <i data-lucide="heart" class="w-5 h-5 text-blue-900 mr-2"></i>
+                                <span class="text-sm text-gray-700">Bible et spiritualité</span>
+                            </div>
+                            <div
+                                class="flex items-center p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors">
+                                <i data-lucide="users" class="w-5 h-5 text-blue-900 mr-2"></i>
+                                <span class="text-sm text-gray-700">Animation jeunesse</span>
+                            </div>
+                            <div
+                                class="flex items-center p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors">
+                                <i data-lucide="award" class="w-5 h-5 text-blue-900 mr-2"></i>
+                                <span class="text-sm text-gray-700">Scoutisme</span>
+                            </div>
+                            <div
+                                class="flex items-center p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors">
+                                <i data-lucide="briefcase" class="w-5 h-5 text-blue-900 mr-2"></i>
+                                <span class="text-sm text-gray-700">Entrepreneuriat</span>
+                            </div>
+                            <div
+                                class="flex items-center p-3 bg-blue-50 rounded-lg hover:bg-blue-100 transition-colors">
+                                <i data-lucide="lightbulb" class="w-5 h-5 text-blue-900 mr-2"></i>
+                                <span class="text-sm text-gray-700">Innovation sociale</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer-gradient text-white py-12">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center">
+                    <h3 class="text-2xl font-bold mb-4">Liadan Régis Barthélémy KOUTOUAN</h3>
+                    <p class="text-gray-400 mb-6">Communicant digital & entrepreneur polyvalent</p>
+                    <p class="text-gray-400 italic">"Communiquer avec sens, entreprendre avec impact."</p>
+                    <div class="mt-8 pt-8 border-t border-gray-800">
+                        <p class="text-gray-500 text-sm"> &copy; 2025 by ~ <a
+                                href="https://aka-prov.onrender.com/">A.K.A</a>. Tous droits réservés.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="style/style.js"></script>
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>
